@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "TEST",
             shortDesc: "Software & Innovation",
             longDesc: "We build innovative software solutions for a modern world.",
-            logo: "https://via.placeholder.com/90/3498db/ffffff?text=TS",
+            logo: "https://via.placeholder.com/150/DC143C/ffffff?text=TEST",
             social: {
                 twitter: "#",
                 facebook: "#",
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Health Matters NGO",
             shortDesc: "Community Wellness",
             longDesc: "Dedicated to promoting public health and well-being.",
-            logo: "https://via.placeholder.com/90/2ecc71/ffffff?text=HM",
+            logo: "https://via.placeholder.com/150/FFD700/000000?text=HM",
             social: {
                 twitter: "#",
                 facebook: "#",
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: "Creative Design Studio",
             shortDesc: "Graphic & Web Design",
             longDesc: "Crafting stunning visual identities and user experiences.",
-            logo: "https://via.placeholder.com/90/f39c12/ffffff?text=DS",
+            logo: "https://via.placeholder.com/150/000000/FFD700?text=CDS",
             social: {
                 twitter: "#",
                 facebook: "#",
@@ -95,69 +95,48 @@ document.addEventListener('DOMContentLoaded', () => {
                     location: 'Art Gallery'
                 }
             ]
-        }
-    ];
-
-    const members = [
-        {
-            id: 1,
-            name: "Sarah Johnson",
-            position: "President",
-            type: "officers",
-            yearLevel: "4th Year",
-            age: 21,
-            contact: "+1 (555) 123-4567",
-            avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
         },
         {
-            id: 2,
-            name: "Michael Chen",
-            position: "Vice President",
-            type: "officers",
-            yearLevel: "3rd Year",
-            age: 20,
-            contact: "+1 (555) 234-5678",
-            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+            id: 'student-council',
+            name: "Student Council",
+            shortDesc: "Student Government",
+            longDesc: "Representing student voices and organizing campus-wide events and initiatives.",
+            logo: "https://via.placeholder.com/150/DC143C/ffffff?text=SC",
+            social: {
+                twitter: "#",
+                facebook: "#",
+                instagram: "#",
+                linkedin: "#"
+            },
+            posts: []
         },
         {
-            id: 3,
-            name: "Emily Rodriguez",
-            position: "Secretary",
-            type: "officers",
-            yearLevel: "3rd Year",
-            age: 20,
-            contact: "+1 (555) 345-6789",
-            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+            id: 'sports-club',
+            name: "Sports Club",
+            shortDesc: "Athletics & Recreation",
+            longDesc: "Promoting physical fitness and competitive sports among students.",
+            logo: "https://via.placeholder.com/150/FFD700/000000?text=SPORT",
+            social: {
+                twitter: "#",
+                facebook: "#",
+                instagram: "#",
+                linkedin: "#"
+            },
+            posts: []
         },
         {
-            id: 4,
-            name: "David Kim",
-            position: "Treasurer",
-            type: "officers",
-            yearLevel: "4th Year",
-            age: 22,
-            contact: "+1 (555) 456-7890",
-            avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-        },
-        {
-            id: 5,
-            name: "Jessica Wang",
-            position: "Member",
-            type: "members",
-            yearLevel: "2nd Year",
-            age: 19,
-            contact: "+1 (555) 567-8901",
-            avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face"
-        },
-        {
-            id: 6,
-            name: "Alex Thompson",
-            position: "Member",
-            type: "members",
-            yearLevel: "1st Year",
-            age: 18,
-            contact: "+1 (555) 678-9012",
-            avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+            id: 'music-society',
+            name: "Music Society",
+            shortDesc: "Musical Arts",
+            longDesc: "Fostering musical talent and organizing concerts and performances.",
+            logo: "https://via.placeholder.com/150/000000/FFD700?text=MUSIC",
+            social: {
+                twitter: "#",
+                facebook: "#",
+                instagram: "#",
+                linkedin: "#"
+            },
+            posts: []
         }
     ];
 
@@ -239,51 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    // Calendar data
-    let currentDate = new Date();
-    const events = [
-        {
-            id: 1,
-            title: "Tech Innovation Workshop",
-            date: "2025-01-15",
-            time: "09:00 AM",
-            organization: "TEST",
-            category: "academic"
-        },
-        {
-            id: 2,
-            title: "Health Awareness Campaign",
-            date: "2025-01-18",
-            time: "08:00 AM",
-            organization: "Health Matters NGO",
-            category: "community"
-        },
-        {
-            id: 3,
-            title: "Student Elections",
-            date: "2025-01-15",
-            time: "10:00 AM",
-            organization: "Student Government",
-            category: "community"
-        },
-        {
-            id: 4,
-            title: "Career Fair",
-            date: "2025-01-20",
-            time: "09:00 AM",
-            organization: "Career Services",
-            category: "academic"
-        },
-        {
-            id: 5,
-            title: "Design Showcase",
-            date: "2025-02-01",
-            time: "10:00 AM",
-            organization: "Creative Design Studio",
-            category: "arts"
-        }
-    ];
-
     // Initialize the application
     init();
 
@@ -293,10 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderAnnouncements();
         renderLostFoundItems();
         renderOrganizations();
-        renderMembersProfiles();
-        setupMemberModal();
         setupEventModal();
-        setupCalendar();
         setupLostFoundTabs();
     }
 
@@ -361,9 +292,9 @@ document.addEventListener('DOMContentLoaded', () => {
             card.className = 'announcement-card';
 
             const priorityColor = {
-                'high': '#e74c3c',
-                'medium': '#f39c12',
-                'low': '#3498db'
+                'high': '#DC143C',
+                'medium': '#FFD700',
+                'low': '#000000'
             };
 
             card.innerHTML = `
@@ -430,31 +361,31 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (filter === 'post') {
             // Show post form
             container.innerHTML = `
-                <div class="post-item-form">
-                    <h3>Post Lost/Found Item</h3>
+                <div class="post-item-form" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(220, 20, 60, 0.1); border-left: 5px solid #DC143C;">
+                    <h3 style="color: #000000; margin-bottom: 20px;">Post Lost/Found Item</h3>
                     <form>
                         <div style="margin-bottom: 15px;">
-                            <label>Type:</label>
-                            <select style="width: 100%; padding: 8px; margin-top: 5px;">
+                            <label style="display: block; margin-bottom: 5px; color: #000000; font-weight: 500;">Type:</label>
+                            <select style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; color: #000000;">
                                 <option value="lost">Lost Item</option>
                                 <option value="found">Found Item</option>
                             </select>
                         </div>
                         <div style="margin-bottom: 15px;">
-                            <label>Title:</label>
-                            <input type="text" placeholder="Item title..." style="width: 100%; padding: 8px; margin-top: 5px;">
+                            <label style="display: block; margin-bottom: 5px; color: #000000; font-weight: 500;">Title:</label>
+                            <input type="text" placeholder="Item title..." style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; color: #000000;">
                         </div>
                         <div style="margin-bottom: 15px;">
-                            <label>Description:</label>
-                            <textarea placeholder="Detailed description..." style="width: 100%; padding: 8px; margin-top: 5px; height: 100px;"></textarea>
+                            <label style="display: block; margin-bottom: 5px; color: #000000; font-weight: 500;">Description:</label>
+                            <textarea placeholder="Detailed description..." style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; height: 100px; color: #000000;"></textarea>
                         </div>
                         <div style="margin-bottom: 15px;">
-                            <label>Location:</label>
-                            <input type="text" placeholder="Where was it lost/found?" style="width: 100%; padding: 8px; margin-top: 5px;">
+                            <label style="display: block; margin-bottom: 5px; color: #000000; font-weight: 500;">Location:</label>
+                            <input type="text" placeholder="Where was it lost/found?" style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; color: #000000;">
                         </div>
-                        <div style="margin-bottom: 15px;">
-                            <label>Contact:</label>
-                            <input type="email" placeholder="Your email..." style="width: 100%; padding: 8px; margin-top: 5px;">
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 5px; color: #000000; font-weight: 500;">Contact:</label>
+                            <input type="email" placeholder="Your email..." style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 8px; color: #000000;">
                         </div>
                         <button type="submit" class="action-btn primary-btn">Post Item</button>
                     </form>
@@ -484,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Render organizations
+    // Render organizations with circular layout
     function renderOrganizations() {
         const container = document.getElementById('organizations-container');
         if (!container) return;
@@ -497,21 +428,20 @@ document.addEventListener('DOMContentLoaded', () => {
             card.addEventListener('click', () => showOrganizationFeed(org));
 
             card.innerHTML = `
-                <img src="${org.logo}" alt="${org.name} Logo" class="organization-logo">
-                <div class="organization-info">
-                    <h3>${org.name}</h3>
-                    <p class="short-desc">${org.shortDesc}</p>
-                    <hr>
+                <div class="organization-logo">
+                    <img src="${org.logo}" alt="${org.name} Logo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div class="organization-name">${org.name}</div>
+                <div class="hover-popup">
+                    <h4>${org.name}</h4>
+                    <p><strong>${org.shortDesc}</strong></p>
+                    <p>${org.longDesc}</p>
                     <div class="social-icons">
                         <a href="${org.social.twitter}" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
                         <a href="${org.social.facebook}" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-facebook-f"></i></a>
                         <a href="${org.social.instagram}" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
                         <a href="${org.social.linkedin}" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                </div>
-                <div class="hover-popup">
-                    <h4>${org.name}</h4>
-                    <p>${org.longDesc}</p>
                 </div>
             `;
 
@@ -528,66 +458,75 @@ document.addEventListener('DOMContentLoaded', () => {
         orgHeader.innerHTML = `
             <img src="${org.logo}" alt="${org.name} Logo">
             <div>
-                <h2>${org.name}</h2>
-                <p>${org.longDesc}</p>
+                <h2 style="color: #000000; margin: 0 0 5px 0;">${org.name}</h2>
+                <p style="color: #666666; margin: 0;">${org.longDesc}</p>
             </div>
         `;
 
         // Clear and populate posts
         postsContainer.innerHTML = '';
 
-        org.posts.forEach(post => {
-            const postCard = document.createElement('div');
-            postCard.className = 'post-card';
+        if (org.posts.length === 0) {
+            postsContainer.innerHTML = `
+                <div style="background: white; padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 4px 15px rgba(220, 20, 60, 0.1); border-left: 5px solid #DC143C;">
+                    <h3 style="color: #666666; margin-bottom: 10px;">No posts available</h3>
+                    <p style="color: #999999;">This organization hasn't posted any content yet. Check back later!</p>
+                </div>
+            `;
+        } else {
+            org.posts.forEach(post => {
+                const postCard = document.createElement('div');
+                postCard.className = 'post-card';
 
-            postCard.innerHTML = `
-                <div class="post-header ${post.category}">
-                    <div class="post-category ${post.category}">${post.category.toUpperCase()}</div>
-                    <h3 class="post-title">${post.title}</h3>
-                    <p class="post-description">${post.description}</p>
-                    <div class="post-meta">
-                        <div style="display: flex; align-items: center; gap: 5px;">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                postCard.innerHTML = `
+                    <div class="post-header ${post.category}">
+                        <div class="post-category ${post.category}">${post.category.toUpperCase()}</div>
+                        <h3 class="post-title">${post.title}</h3>
+                        <p class="post-description">${post.description}</p>
+                        <div class="post-meta">
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                ${formatDate(post.date)}
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12,6 12,12 16,14"></polyline>
+                                </svg>
+                                ${post.time}
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                ${post.location}
+                            </div>
+                        </div>
+                    </div>
+                    <img src="${post.image}" alt="${post.title}" class="post-image">
+                    <div class="post-actions">
+                        <button class="see-more-btn" onclick="showPostDetails(${post.id}, '${org.id}')">See More</button>
+                        <button class="add-calendar-btn" onclick="addToCalendar('${post.title}', '${post.date}', '${post.time}')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; margin-right: 5px;">
                                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                                 <line x1="16" y1="2" x2="16" y2="6"></line>
                                 <line x1="8" y1="2" x2="8" y2="6"></line>
                                 <line x1="3" y1="10" x2="21" y2="10"></line>
                             </svg>
-                            ${formatDate(post.date)}
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 5px;">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12,6 12,12 16,14"></polyline>
-                            </svg>
-                            ${post.time}
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 5px;">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            ${post.location}
-                        </div>
+                            Add to Calendar
+                        </button>
                     </div>
-                </div>
-                <img src="${post.image}" alt="${post.title}" class="post-image">
-                <div class="post-actions">
-                    <button class="see-more-btn" onclick="showPostDetails(${post.id}, '${org.id}')">See More</button>
-                    <button class="add-calendar-btn" onclick="addToCalendar('${post.title}', '${post.date}', '${post.time}')">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; margin-right: 5px;">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                        </svg>
-                        Add to Calendar
-                    </button>
-                </div>
-            `;
+                `;
 
-            postsContainer.appendChild(postCard);
-        });
+                postsContainer.appendChild(postCard);
+            });
+        }
 
         // Show the feed page
         showPage('org-feed');
@@ -598,190 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Members profiles in right sidebar
-    function renderMembersProfiles() {
-        const container = document.getElementById('members-profiles');
-        if (!container) return;
-
-        container.innerHTML = '';
-
-        members.forEach(member => {
-            const profileDiv = document.createElement('div');
-            profileDiv.className = 'member-profile';
-
-            profileDiv.innerHTML = `
-                <img src="${member.avatar}" alt="${member.name}" class="member-profile-avatar">
-                <div class="member-profile-info">
-                    <div class="member-profile-name">${member.name}</div>
-                    <div class="member-profile-position">${member.position}</div>
-                </div>
-                <div class="member-profile-details">
-                    <div class="member-detail-item">
-                        <span class="member-detail-label">Year:</span>
-                        <span class="member-detail-value">${member.yearLevel}</span>
-                    </div>
-                    <div class="member-detail-item">
-                        <span class="member-detail-label">Age:</span>
-                        <span class="member-detail-value">${member.age}</span>
-                    </div>
-                    <div class="member-detail-item">
-                        <span class="member-detail-label">Contact:</span>
-                        <span class="member-detail-value">${member.contact}</span>
-                    </div>
-                </div>
-            `;
-
-            profileDiv.addEventListener('click', () => {
-                const details = profileDiv.querySelector('.member-profile-details');
-                const isExpanded = profileDiv.classList.contains('expanded');
-
-                // Close all other expanded profiles
-                container.querySelectorAll('.member-profile').forEach(p => {
-                    p.classList.remove('expanded');
-                    p.querySelector('.member-profile-details').classList.remove('show');
-                });
-
-                if (!isExpanded) {
-                    profileDiv.classList.add('expanded');
-                    details.classList.add('show');
-                }
-            });
-
-            container.appendChild(profileDiv);
-        });
-    }
-
-    // Calendar functionality
-    function setupCalendar() {
-        const calendarGrid = document.getElementById('calendar-grid');
-        const monthYearElement = document.getElementById('calendar-month-year');
-        const prevBtn = document.getElementById('prev-month');
-        const nextBtn = document.getElementById('next-month');
-
-        if (!calendarGrid) return;
-
-        prevBtn.addEventListener('click', () => {
-            currentDate.setMonth(currentDate.getMonth() - 1);
-            renderCalendar();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentDate.setMonth(currentDate.getMonth() + 1);
-            renderCalendar();
-        });
-
-        renderCalendar();
-        renderUpcomingEvents();
-
-        function renderCalendar() {
-            const year = currentDate.getFullYear();
-            const month = currentDate.getMonth();
-
-            monthYearElement.textContent = new Date(year, month).toLocaleDateString('en-US', {
-                month: 'long',
-                year: 'numeric'
-            });
-
-            calendarGrid.innerHTML = '';
-
-            // Add day headers
-            const dayHeaders = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-            dayHeaders.forEach(day => {
-                const dayElement = document.createElement('div');
-                dayElement.className = 'calendar-header-day';
-                dayElement.textContent = day;
-                calendarGrid.appendChild(dayElement);
-            });
-
-            // Calculate first day and days in month
-            const firstDay = new Date(year, month, 1).getDay();
-            const daysInMonth = new Date(year, month + 1, 0).getDate();
-            const today = new Date();
-
-            // Add empty cells for previous month days
-            for (let i = 0; i < firstDay; i++) {
-                const emptyDay = document.createElement('div');
-                emptyDay.className = 'calendar-day other-month';
-                calendarGrid.appendChild(emptyDay);
-            }
-
-            // Add days of current month
-            for (let day = 1; day <= daysInMonth; day++) {
-                const dayElement = document.createElement('div');
-                dayElement.className = 'calendar-day';
-                dayElement.textContent = day;
-
-                const currentDay = new Date(year, month, day);
-                const dateString = currentDay.toISOString().split('T')[0];
-
-                // Check if today
-                if (currentDay.toDateString() === today.toDateString()) {
-                    dayElement.classList.add('today');
-                }
-
-                // Check if has events
-                const hasEvent = events.some(event => event.date === dateString);
-                if (hasEvent) {
-                    dayElement.classList.add('has-event');
-                    dayElement.addEventListener('click', () => {
-                        const dayEvents = events.filter(event => event.date === dateString);
-                        showEventDetails(dayEvents[0]); // Show first event for simplicity
-                    });
-                }
-
-                calendarGrid.appendChild(dayElement);
-            }
-        }
-
-        function renderUpcomingEvents() {
-            const upcomingContainer = document.getElementById('upcoming-events');
-            if (!upcomingContainer) return;
-
-            const nextWeekEvents = events
-                .filter(event => {
-                    const eventDate = new Date(event.date);
-                    const today = new Date();
-                    const nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
-                    return eventDate >= today && eventDate <= nextWeek;
-                })
-                .sort((a, b) => new Date(a.date) - new Date(b.date));
-
-            upcomingContainer.innerHTML = '';
-
-            nextWeekEvents.forEach(event => {
-                const eventElement = document.createElement('div');
-                eventElement.className = 'event-item';
-                eventElement.innerHTML = `
-                    <div class="event-title">${event.title}</div>
-                    <div class="event-time">${formatDate(event.date)} at ${event.time}</div>
-                `;
-
-                eventElement.addEventListener('click', () => showEventDetails(event));
-                upcomingContainer.appendChild(eventElement);
-            });
-
-            if (nextWeekEvents.length === 0) {
-                upcomingContainer.innerHTML = '<p style="color: #7f8c8d; text-align: center;">No upcoming events</p>';
-            }
-        }
-    }
-
     // Modal functionality
-    function setupMemberModal() {
-        const modal = document.getElementById('member-modal');
-        const closeBtn = modal.querySelector('.close');
-
-        closeBtn.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
-
-        window.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-            }
-        });
-    }
-
     function setupEventModal() {
         const modal = document.getElementById('event-modal');
         const closeBtn = modal.querySelector('.close');
@@ -795,27 +551,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 modal.classList.remove('active');
             }
         });
-    }
-
-    function showEventDetails(event) {
-        const modal = document.getElementById('event-modal');
-        const detailsContainer = document.getElementById('event-details');
-
-        detailsContainer.innerHTML = `
-            <h2>${event.title}</h2>
-            <div style="margin: 20px 0;">
-                <p><strong>Date:</strong> ${formatDate(event.date)}</p>
-                <p><strong>Time:</strong> ${event.time}</p>
-                <p><strong>Organization:</strong> ${event.organization}</p>
-                <p><strong>Category:</strong> ${event.category}</p>
-            </div>
-            <div style="margin-top: 20px;">
-                <button class="action-btn primary-btn" onclick="addToCalendar('${event.title}', '${event.date}', '${event.time}')">Add to Calendar</button>
-                <button class="action-btn secondary-btn">Share Event</button>
-            </div>
-        `;
-
-        modal.classList.add('active');
     }
 
     // Utility functions
