@@ -432,17 +432,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${org.logo}" alt="${org.name} Logo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
                 </div>
                 <div class="organization-name">${org.name}</div>
-                <div class="hover-popup">
-                    <h4>${org.name}</h4>
-                    <p><strong>${org.shortDesc}</strong></p>
-                    <p>${org.longDesc}</p>
-                    <div class="social-icons">
-                        <a href="${org.social.twitter}" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-twitter"></i></a>
-                        <a href="${org.social.facebook}" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-facebook-f"></i></a>
-                        <a href="${org.social.instagram}" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-instagram"></i></a>
-                        <a href="${org.social.linkedin}" target="_blank" onclick="event.stopPropagation()"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
             `;
 
             container.appendChild(card);
